@@ -18,13 +18,32 @@
   a {
     display: flex;
     align-items: center;
+    justify-content: center;
+
     max-width: max-content;
-    height: 60px;
-    border: 2px solid var(--color-primary);
+    height: 50px;
+
     box-sizing: border-box;
-    padding: .5em 2em;
-    border-radius: 50px;
+    padding: 0.5em 1.5em;
+
+    font-size: 1rem;
     text-decoration: none;
+    border-radius: 50px;
+    border: 2px solid var(--color-primary);
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+
+  a:hover {
+    background: var(--color-primary);
+  }
+
+  a > span {
+    text-align: center;
+    color: var(--color-primary);
+  }
+
+  a:hover > span {
+    color: var(--color-text-light);
   }
 
   a :global(img) {
