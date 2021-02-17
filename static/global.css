@@ -47,6 +47,7 @@
   --color-text-footer: #b39aa8;
   --color-border: #f2deea;
   --box-shadow: 0 4px 20px rgba(91, 46, 72, 0.1);
+  --border-radius: 16px;
   --content-side-padding: 1em;
 }
 

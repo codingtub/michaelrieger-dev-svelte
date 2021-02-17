@@ -1,21 +1,17 @@
 <script lang="ts">
-  interface Link {
-    title: string;
-    url: string;
-    external?: boolean;
-  }
-
-  export let link: Link;
+  export let url: string;
+  export let title: string;
+  export let external = false;
 </script>
 
-<a href={link.url} target={link.external ? '_blank' : ''}>
-  <slot name="start" class="icon icon-start" />
-  <span>{link.title}</span>
-  <slot name="end" class="icon icon-end" />
+<a href={url} target={external ? '_blank' : ''} class="link">
+  <slot name="start" />
+  <span class="link__label">{title}</span>
+  <slot name="end" />
 </a>
 
 <style>
-  a {
+  .link {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -33,29 +29,31 @@
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
   }
 
-  a:hover {
+  .link:hover,
+  .link:focus,
+  .link:focus-within {
     background: var(--color-primary);
   }
 
-  a > span {
+  .link__label {
     text-align: center;
     color: var(--color-primary);
   }
 
-  a:hover > span {
+  .link:hover .link__label {
     color: var(--color-text-light);
   }
 
-  a :global(img) {
+  .link :global(img) {
     height: 24px;
     width: auto;
   }
 
-  a :global(img:first-child) {
+  .link :global(img:first-child) {
     margin-right: 1em;
   }
 
-  a :global(img:last-child) {
+  .link :global(img:last-child) {
     margin-left: 1em;
   }
 </style>

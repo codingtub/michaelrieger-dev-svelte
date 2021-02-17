@@ -1,18 +1,22 @@
 <script lang="ts">
   import LinkButton from '../components/LinkButton.svelte';
+  // import iconSend from 'images/iconSend.svg';
 
-  export let contactEmail: string = 'hello@michaelrieger.dev';
+  const contactLink = {
+    title: 'Wanna chat?',
+    url: 'mailto:hello@michaelrieger.dev',
+  };
 </script>
 
-<nav>
-  <p>Michael Rieger</p>
-  <LinkButton link={{ title: 'Wanna chat?', url: 'mailto:' + contactEmail }}>
-    <!-- <img slot="end" src="images/i-send.svg" alt="Send icon" /> -->
+<nav class="nav">
+  <p class="nav__title">Michael Rieger</p>
+  <LinkButton {...contactLink}> 
+    <!-- <img slot="start" src={iconSend} alt="Send icon" /> -->
   </LinkButton>
 </nav>
 
 <style>
-  nav {
+  .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,7 +24,7 @@
     padding: 2em var(--content-side-padding);
   }
 
-  p {
+  .nav__title {
     font-size: clamp(1rem, 3vw, 1.5rem);
   }
 </style>

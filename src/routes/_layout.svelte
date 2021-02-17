@@ -1,5 +1,6 @@
 <script lang="ts">
-  import Nav from "../components/Nav.svelte";
+  import Footer from '../components/Footer.svelte';
+  import Nav from '../components/Nav.svelte';
 </script>
 
 <Nav />
@@ -7,6 +8,8 @@
 <main>
   <slot />
 </main>
+
+<Footer />
 
 <style>
   main {
