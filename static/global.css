@@ -38,15 +38,16 @@
 }
 
 :root {
-  --color-primary: #5b2e48;
-  --color-bg: #ffffff;
-  --color-text-dark: #131515;
-  --color-text-lighter: #738080;
-  --color-text-light: #f6f9fc;
-  --color-text-darker: #e6d3de;
-  --color-text-footer: #b39aa8;
-  --color-border: #f2deea;
-  --box-shadow: 0 4px 20px rgba(91, 46, 72, 0.1);
+  --color-primary: hsl(325, 33%, 27%);
+  --color-bg: hsl(0, 0%, 100%);
+  --color-text-dark: hsl(180, 5%, 8%);
+  --color-text-lighter: hsl(325, 8%, 90%);
+  --color-text-light: hsl(325, 50%, 98%);
+  --color-text-skills: hsl(325, 10%, 30%);
+  --color-text-darker: hsl(325, 28%, 86%);
+  --color-text-footer: hsl(325, 14%, 65%);
+  --color-border: hsl(325, 43%, 91%);
+  --box-shadow: 0 4px 20px hsla(325, 33%, 27%, 0.1);
   --border-radius: 16px;
   --content-side-padding: 1em;
 }
@@ -70,6 +71,45 @@ section {
   padding: 4em var(--content-side-padding);
 }
 
+.heading-l {
+  font-size: clamp(1.75rem, 5vw, 3.75rem);
+  line-height: 1.25em;
+  font-weight: bold;
+}
+
+.heading-m {
+  font-size: clamp(1.5rem, 4vw, 3.125rem);
+  line-height: 1.5em;
+  font-weight: bold;
+}
+
+.heading-s {
+  font-size: clamp(1.25rem, 4vw, 1.5rem);
+  line-height: 1.25em;
+  font-weight: bold;
+}
+
+.heading-xs {
+  font-size: clamp(1.125rem, 4vw, 1.25rem);
+  line-height: 1.25em;
+  font-weight: 600;
+}
+
+.text-l {
+  font-size: clamp(1.125rem, 3vw, 1.25rem);
+  line-height: 1.5em;
+}
+
+.text-m {
+  font-size: clamp(1.125rem, 3vw, 1.25rem);
+  line-height: 1.5em;
+}
+
+.text-s {
+  font-size: clamp(1.125rem, 3vw, 1.25rem);
+  line-height: 1.5em;
+}
+
 @media (min-width: 43em) {
   :root {
     --content-side-padding: 4vw;
@@ -82,5 +122,4 @@ section {
   }
 }
 
-@media (min-width: 87em) {
-}
+@media (min-width: 87em) {}

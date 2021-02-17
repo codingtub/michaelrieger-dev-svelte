@@ -1,8 +1,8 @@
 <script lang="ts">
-  import bgMobile from 'images/bgMobile.svg';
-  import bgDesktop from 'images/bgDesktop.svg';
-  import avatarDefault from 'images/avatarDefault.svg';
-  import { fade } from 'svelte/transition';
+  import bgMobile from "images/bgMobile.svg";
+  import bgDesktop from "images/bgDesktop.svg";
+  import avatarDefault from "images/avatarDefault.svg";
+  import { fade } from "svelte/transition";
 
   let desktop = false;
 
@@ -42,8 +42,8 @@
       class="hero__avatar"
     />
     <div class="hero__content">
-      <h1 class="hero__title">Full-stack Dev, Designer & Nerd</h1>
-      <p class="hero__text">
+      <h1 class="hero__title heading-l">Full-stack Dev, Designer & Nerd</h1>
+      <p class="hero__text text-l">
         I build web stuff, read blog posts and fantasy books, and I love it.
       </p>
     </div>
@@ -87,15 +87,10 @@
   .hero__title {
     max-width: 15ch;
     margin-bottom: 0.5em;
-    font-size: clamp(1.75rem, 5vw, 3.75rem);
-    line-height: 1.25em;
-    font-weight: bold;
   }
-  
+
   .hero__text {
     max-width: 22ch;
-    font-size: clamp(1.125rem, 4vw, 1.25rem);
-    line-height: 1.5em;
   }
 
   @media (min-width: 43em) {

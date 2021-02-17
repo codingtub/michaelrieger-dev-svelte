@@ -1,39 +1,15 @@
 <script lang="ts">
-  import type { Skill } from '../_shared/types/skill';
-  import iconSend from 'images/iconSend.svg';
-  import SkillsList from './SkillsList.svelte';
+  import type { Skill } from "../_shared/types/skill";
 
-  const skills: Skill[] = [
-    {
-      icon: iconSend,
-      title: 'Full-Stack Developer',
-      description:
-        'I love to learn and explore. I love to create and the process coming with it. Web development along with its tools, frameworks and community never fails to scratch those itches.',
-      skillsTitle: 'What I mostly use:',
-      skillsList: [
-        'HTML/Twig',
-        'TypeScript',
-        'JavaScript',
-        'good ol\' CSS/Sass',
-        'PHP (WordPress)'
-      ],
-      toolsTitle: 'My tools of choice:',
-      toolsList: [
-        'VS Code',
-        'JetBrains PHPStorm',
-        'fish/PowerShell w/Starship',
-        'Angular',
-        'Next.js / Stencil.js',
-        'Svelte'
-      ]
-    },
-  ];
+  import SkillsList from "./SkillsList.svelte";
+
+  export let skills: Skill[];
 </script>
 
 <section class="skills">
   <div class="skills__bg">
-    <h2 class="skills__title">Servus, I'm Mike. Nice to meet you!</h2>
-    <p class="skills__introduction">
+    <h2 class="skills__title heading-m">Servus, I'm Mike. Nice to meet you!</h2>
+    <p class="skills__introduction text-l">
       Since starting to screw around with computers about 15 years ago, I got my
       Bachelor's degree in Mobile Computing and shifted my interests into the
       web and design world about three years ago. I'm the CTO of a wonderful
@@ -53,14 +29,14 @@
     padding-bottom: 4em;
   }
 
-  .skills__title {
-    color: var(--color-text-light);
-  }
-
   .skills__bg {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     width: 100%;
     box-sizing: border-box;
-    padding-top: 4em;
+    padding-top: 6em;
+    padding-bottom: 16em;
     background: var(--color-primary);
   }
 
@@ -70,8 +46,12 @@
   }
 
   .skills__title {
+    max-width: 15ch;
+    color: var(--color-text-light);
+    margin-bottom: 1em;
   }
 
   .skills__introduction {
+    color: var(--color-text-lighter);
   }
 </style>
