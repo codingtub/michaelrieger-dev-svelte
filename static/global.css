@@ -40,7 +40,7 @@
 :root {
   --color-primary: hsl(325, 33%, 27%);
   --color-bg: hsl(0, 0%, 100%);
-  --color-text-dark: hsl(180, 5%, 8%);
+  --color-text-dark: hsl(325, 5%, 8%);
   --color-text-lighter: hsl(325, 8%, 90%);
   --color-text-light: hsl(325, 50%, 98%);
   --color-text-skills: hsl(325, 10%, 30%);
@@ -106,7 +106,7 @@ section {
 }
 
 .text-s {
-  font-size: clamp(1.125rem, 3vw, 1.25rem);
+  font-size: clamp(1rem, 3vw, 1.125rem);
   line-height: 1.5em;
 }
 

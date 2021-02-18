@@ -87,6 +87,7 @@
   .hero__title {
     max-width: 15ch;
     margin-bottom: 0.5em;
+    color: var(--color-text-dark);
   }
 
   .hero__text {
@@ -95,7 +96,7 @@
 
   @media (min-width: 43em) {
     .hero {
-      padding-top: 4em;
+      padding: 6em var(--content-side-padding) 8em;
     }
     .hero__title {
       max-width: unset;

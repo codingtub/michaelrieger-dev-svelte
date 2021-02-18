@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Skill } from "../_shared/types/skill";
+  import type { Skill } from '../_shared/types/skill';
 
   export let skills: Skill[];
 </script>
@@ -11,7 +11,7 @@
         <header class="skill__header">
           <img
             src={skill.icon}
-            alt={skill.title + " icon"}
+            alt={skill.title + ' icon'}
             class="skill__icon"
           />
           <h3 class="skill__title heading-s">{skill.title}</h3>
@@ -62,7 +62,7 @@
     min-height: 200px;
 
     box-sizing: border-box;
-    padding: 3em 1.5em;
+    padding: 3em 2em;
 
     text-align: center;
     background: var(--color-bg);
@@ -70,6 +70,11 @@
     border-radius: 0;
   }
 
+  .skill:not(:first-child):not(:last-child) {
+    border-radius: 0;
+    border-top: none;
+    border-bottom: none;
+  }
   .skill:first-child {
     border-radius: var(--border-radius) var(--border-radius) 0 0;
     border-bottom: 1px solid var(--color-border);
@@ -94,13 +99,15 @@
 
   .skill__title {
     margin-bottom: 1.5em;
+    color: var(--color-primary);
   }
 
   .skill__content {
+    color: var(--color-primary);
   }
 
   .skill__description {
-    max-width: 26ch;
+    max-width: 52ch;
     margin-bottom: 2em;
     color: var(--color-text-skills);
   }
@@ -121,5 +128,35 @@
 
   .skill__item {
     color: var(--color-text-skills);
+  }
+
+  @media (min-width: 62em) {
+    .skills__list {
+      flex-flow: row nowrap;
+      width: 100%;
+    }
+
+    .skill {
+      flex: 1;
+    }
+
+    .skill:not(:first-child):not(:last-child) {
+      border-radius: 0;
+      border: 1px solid var(--color-border);
+      border-left: none;
+      border-right: none;
+    }
+    .skill:first-child {
+      border-radius: var(--border-radius) 0 0 var(--border-radius);
+    }
+    .skill:last-child {
+      border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    }
+
+    .skill__description {
+      max-width: 26ch;
+      margin-bottom: 2em;
+      color: var(--color-text-skills);
+    }
   }
 </style>

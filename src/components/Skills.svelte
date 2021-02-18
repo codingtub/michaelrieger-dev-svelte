@@ -1,7 +1,7 @@
 <script lang="ts">
-  import type { Skill } from "../_shared/types/skill";
+  import type { Skill } from '../_shared/types/skill';
 
-  import SkillsList from "./SkillsList.svelte";
+  import SkillsList from './SkillsList.svelte';
 
   export let skills: Skill[];
 </script>
@@ -31,8 +31,8 @@
 
   .skills__bg {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-flow: column wrap;
+    align-items: center;
     width: 100%;
     box-sizing: border-box;
     padding-top: 6em;
@@ -53,5 +53,12 @@
 
   .skills__introduction {
     color: var(--color-text-lighter);
+    max-width: 65ch;
+  }
+
+  @media (min-width: 43em) {
+    .skills__title {
+      max-width: unset;
+    }
   }
 </style>
