@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { Skill } from '../_shared/types/skill';
+  import type { Skill } from "../_shared/types/skill";
 
   export let skills: Skill[];
 </script>
@@ -11,7 +11,7 @@
         <header class="skill__header">
           <img
             src={skill.icon}
-            alt={skill.title + ' icon'}
+            alt={skill.title + " icon"}
             class="skill__icon"
           />
           <h3 class="skill__title heading-s">{skill.title}</h3>
@@ -46,7 +46,10 @@
   .skills__list {
     display: flex;
     flex-flow: column wrap;
+    max-width: 1440px;
     min-height: 600px;
+
+    margin: 0 auto;
 
     box-sizing: border-box;
 
@@ -99,7 +102,7 @@
 
   .skill__title {
     margin-bottom: 1.5em;
-    color: var(--color-primary);
+    color: var(--color-text-dark);
   }
 
   .skill__content {

@@ -4,7 +4,7 @@
   export let external = false;
 </script>
 
-<a href={url} target={external ? '_blank' : ''} class="link">
+<a href={url} target={external ? "_blank" : ""} class="link">
   <slot name="start" />
   <span class="link__label">{title}</span>
   <slot name="end" />
@@ -47,6 +47,10 @@
   .link :global(img) {
     height: 24px;
     width: auto;
+  }
+
+  .link:hover :global(img) {
+    filter: brightness(10);
   }
 
   .link :global(img:first-child) {
