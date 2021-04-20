@@ -9,8 +9,8 @@
 </script>
 
 <nav class="nav">
-  <p class="nav__title">Michael Rieger</p>
-  <LinkButton {...contactLink}> 
+  <a href="/" class="nav__title"><p>Michael Rieger</p></a>
+  <LinkButton {...contactLink}>
     <!-- <img slot="start" src={iconSend} alt="Send icon" /> -->
   </LinkButton>
 </nav>
@@ -25,6 +25,8 @@
   }
 
   .nav__title {
+    text-decoration: none;
+    color: unset;
     font-size: clamp(1rem, 3vw, 1.5rem);
   }
 </style>

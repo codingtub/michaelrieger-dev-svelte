@@ -15,13 +15,13 @@
   </div>
   <div class="footer__inner">
     <div class="footer__social">
-      <a class="footer__link-button" href="/">
+      <a class="footer__link-button" href="https://twitter.com/cuddly_goblin" target="_blank" rel="noreferrer noopener">
         <img src={iconTwitter} alt="Twitter icon" />
       </a>
-      <a class="footer__link-button" href="/">
+      <a class="footer__link-button" href="https://www.linkedin.com/in/riegerm/" target="_blank" rel="noreferrer noopener">
         <img src={iconLinkedIn} alt="LinkedIn icon" />
       </a>
-      <a class="footer__link-button" href="/">
+      <a class="footer__link-button" href="https://github.com/codingtub" target="_blank" rel="noreferrer noopener">
         <img src={iconGithub} alt="GitHub icon" />
       </a>
     </div>

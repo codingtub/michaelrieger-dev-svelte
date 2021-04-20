@@ -1,8 +1,5 @@
 <script lang="ts">
-  import bgMobile from "images/bgMobile.svg";
-  import bgDesktop from "images/bgDesktop.svg";
   import avatarDefault from "images/avatarDefault.svg";
-  import { fade } from "svelte/transition";
 
   let desktop = false;
 
@@ -40,11 +37,13 @@
       src={avatarDefault}
       alt="A comic version of myself"
       class="hero__avatar"
+      width="280"
+      height="300"
     />
     <div class="hero__content">
       <h1 class="hero__title heading-l">Full-stack Dev, Designer & Nerd</h1>
       <p class="hero__text text-l">
-        I build web stuff, read blog posts and fantasy books, and I love it.
+        I build web stuff, read blog posts and fantasy books and play a lot of video games.
       </p>
     </div>
   </div>
